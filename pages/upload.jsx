@@ -20,7 +20,7 @@ const Upload = () => {
       const formData = new FormData();
       formData.append("image", imageUploaded);
 
-      await fetch(`http://localhost:3000/api/upload`, {
+      await fetch(`/api/upload`, {
         method: "POST",
         body: formData,
       });
