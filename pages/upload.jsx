@@ -20,12 +20,12 @@ const Upload = () => {
       const formData = new FormData();
       formData.append("image", imageUploaded);
 
-      await fetch(`/api/upload`, {
+      await fetch("/api/upload", {
         method: "POST",
         body: formData,
       });
 
-      await Router.push("/");
+      Router.push("/");
     } catch (error) {
       console.error(error);
     }
