@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = "postgres://lrgnvdim:IruvAHdiLRRa-gFR3uoQ4jgOJYiv19S-@hansken.db.elephantsql.com:5432/lrgnvdim"
+  provider = env("DATABASE_PROVIDER")
+  url      = env("DATABASE_URL")
 }
 
 model Image {
